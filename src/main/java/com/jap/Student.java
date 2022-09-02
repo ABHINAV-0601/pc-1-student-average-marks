@@ -32,4 +32,12 @@ public class Student {
         this. totalMarks = totalMarks;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", rollNo=" + rollNo +
+                ", totalMarks=" + totalMarks +
+                '}';
+    }
 }
