@@ -29,13 +29,15 @@ public class StudentService {
 
     public static Set<String> getAllStudentNameInSorted(Set<Student> studentSet){
         //Create a TreeSet object
-
+        Set<String> stringSet = new TreeSet<>();
         //Use Iterator object of type <Student> to iterate through the studentSet
-
+        Iterator<Student> iterator = studentSet.iterator();
         //get all the name and add it inside the TreeSet object
-
+            while(iterator.hasNext()){
+                stringSet.add(iterator.next().getName());
+            }
       //return the TreeSet object;
-        return null;
+        return stringSet;
     }
 
     public static Map<String,Integer> calculateAverage(Set<Student> studentSet){
