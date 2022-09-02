@@ -42,17 +42,20 @@ public class StudentService {
 
     public static Map<String,Integer> calculateAverage(Set<Student> studentSet){
         //create a HashMap object of type <String,Integer>
-
+        Map<String,Integer> map = new HashMap<>();
         //Use Iterator object of type <Student>to iterate through the studentSet
-
+        Iterator<Student> iterator = studentSet.iterator();
         //retrieve the Student object from the iterator
-
+            while(iterator.hasNext()){
+                Student obj = iterator.next();
+                map.put(obj.getName(), obj.getTotalMarks());
+            }
         //Use getter method to get TotalMarks of each student. calculate the average
 
         //add the student name and average marks in the HashMap object created in the
         //first line and return the map
 
-           return null;
+           return map;
 
     }
 
